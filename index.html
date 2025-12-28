@@ -1766,14 +1766,29 @@
     0 0 28px rgba(22, 219, 101, 0.35); */
             font-size: large;
         }
+         .input_log1:valid~.label1 {
+            transform: translateY(-100px);
+            color: #16db65;
+            /* text-shadow:
+    0 0 6px rgba(22, 219, 101, 0.7),
+    0 0 14px rgba(22, 219, 101, 0.5),
+    0 0 28px rgba(22, 219, 101, 0.35); */
+            font-size: large;
+        }
 
         .input_log2:focus~.label2 {
             transform: translateY(-100px);
             color: #16db65;
             font-size: large;
         }
+         .input_log2:not(:placeholder-shown) ~ .label2 {
+            transform: translateY(-100px) !important;
+            color: #16db65;
+            font-size: large;
+        }
 
-        .input_log3:focus~.label3 {
+        .input_log3:focus~.label3,
+        .input_log3:valid~.label3 {
             transform: translateY(-100px);
             color: #16db65;
             font-size: large;
@@ -3208,18 +3223,18 @@
 
                 <div class="contact_box2">
                     <form>
-                        <input type="text" class="input_log1">
+                        <input type="text" class="input_log1" required>
                         <label for="name" class="label1">Name</label>
 
 
                         <div class="input_line"></div>
 
                         <br><br>
-                        <input type="email" class="input_log2">
+                        <input type="email" class="input_log2" required>
                         <label for="name" class="label2">Email</label>
                         <div class="input_line"></div>
                         <br><br>
-                        <input type="password" class="input_log3">
+                        <input type="password" class="input_log3" required>
                         <label for="name" class="label3">Password</label>
                         <div class="input_line"></div>
                         <button type="submit" class=" d-block mt-5 mx-auto button69">Submit</button>
@@ -3233,5 +3248,6 @@
 
 
 </body>
+
 
 </html>
